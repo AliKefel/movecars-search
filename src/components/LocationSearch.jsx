@@ -35,10 +35,10 @@ const LocationSearch = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(`./locations.json`);
-        if (!re.sponse.ok) throw new Error('Network response was not ok');
+        if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
         setLocationsData(data);
-      } catch (error) {
+      } catch (error) { 
         console.error('Failed to fetch:', error);
       }
     };
