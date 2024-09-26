@@ -34,7 +34,7 @@ const LocationSearch = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/locations.json'); // Correct path to fetch from public folder
+        const response = await fetch(`${process.env.PUBLIC_URL}/locations.json`); 
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
         setLocationsData(data);
