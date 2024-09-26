@@ -6,9 +6,9 @@ const SearchBarComp = () => {
     return (
         <div className=" mx-auto justify-center items-center flex">
 
-            <form className="bg-gray-100 flex row space-x-12 shadow-xl rounded-3xl  pt-2 pb-2 border-2 border-cyan-700 w-fit p-3">
+            <form className="bg-gray-100 flex row space-x-12 shadow-xl rounded-3xl  pt-2 pb-2 border-4 border-cyan-700 w-fit p-3">
 
-                <div className='flex flex-col space-y-1 w-1/2 border-2'>
+                <div className='flex flex-col space-y-1 w-1/2 '>
 
                     <div className='flex flex-col justify-center w-full space-x-0'>
                         <label className="block text-gray-700 text-xl font-extrabold items-center justify-center" htmlFor="pickup-date">
@@ -104,7 +104,7 @@ const SearchBarComp = () => {
                                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="vehicle">
                                         Vehicle Type
                                     </label>
-                                    <select id="vehicle" className=' bg-black rounded-md border shadow-md p-4 text-md text-white focus:shadow-outline hover:bg-slate-800 focus:ring-2 duration-300' >
+                                    <select id="vehicle" className=' bg-black rounded-md shadow-md p-4 text-md text-white focus:shadow-outline hover:bg-slate-800 focus:ring-2 duration-300' >
                                         <option  disabled >Select Vehicle Type</option>
                                         <option>Car</option>
                                         <option>Truck</option>
@@ -139,7 +139,7 @@ const SearchBarComp = () => {
 
                         <div className='flex flex-row w-full space-x-5   mt-4'>
 
-                            <div className='border-2 w-1/2'>   
+                            <div className=' w-1/2'>   
 
                             </div>
 
