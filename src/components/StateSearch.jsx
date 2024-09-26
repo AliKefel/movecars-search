@@ -8,7 +8,7 @@ const StateSearch = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${process.env.PUBLIC_URL}/locations.json`); 
+        const response = await fetch('/locations.json'); // Ensure 'locations.json' is correct
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
         setLocationsData(data);
