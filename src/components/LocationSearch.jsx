@@ -34,7 +34,7 @@ const LocationSearch = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`movecars-search/locations.json`);
+        const response = await fetch(`/locations.json`);
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
         setLocationsData(data);
