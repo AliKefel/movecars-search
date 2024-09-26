@@ -3,10 +3,16 @@ import LocationSearch from './LocationSearch'
 import StateSearch from './StateSearch'
 
 const SearchBarComp = () => {
+
+    const handleSubmit = (event) => {
+        event.preventDefault(); // Prevent the default form submission behavior
+        console.log('Search button clicked');
+    };
+
     return (
         <div className=" mx-auto justify-center items-center flex">
 
-            <form className="bg-gray-100 flex row space-x-12 shadow-xl rounded-3xl  pt-2 pb-2 border-4 border-cyan-700 w-fit p-3">
+            <form className="bg-gray-100 flex row space-x-12 shadow-xl rounded-3xl  pt-2 pb-2 border-4 border-cyan-700 w-fit p-3" id='cars-search ' onSubmit={handleSubmit}>
 
                 <div className='flex flex-col space-y-1 w-1/2 '>
 
@@ -61,12 +67,8 @@ const SearchBarComp = () => {
 
                 </div>
 
-
-
-
-
                 <div className="flex flex-col space-x-2 w-1/2 ">
-                    {/* Flex container for Vehicle Type and Dates */}
+                    {/* container for Vehicle Type and Dates */}
                     <div className='flex flex-col '>
 
                         <div className="flex flex-row items-start w-full">
@@ -87,18 +89,6 @@ const SearchBarComp = () => {
                                     />
                                 </div>
 
-                                {/* Drop-off Date
-                                <div className="w-full">
-                                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="dropoff-date">
-                                        Drop-off Date
-                                    </label>
-                                    <input
-                                        id="dropoff-date"
-                                        type="date"
-                                        onFocus={(e) => e.target.showPicker()} // Triggers the calendar popup
-                                        className='bg-black rounded-md shadow-md p-2 text-white hover:bg-slate-800 focus:outline-none focus:ring-4 focus:ring-blue-700 transition-all duration-300'
-                                    />
-                                </div> */}
 
                                 <div className="w-full h-1/2 mb-3 ">
                                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="vehicle">
@@ -147,7 +137,7 @@ const SearchBarComp = () => {
 
                                 <div className='w-full flex flex-col space-x-4 items-end justify-end text-nowrap'>
 
-                                    <button type="submit" onClick={() => console.log('Search button clicked')} className='w-full '>
+                                    <button type="submit" className='w-full '>
                                         <div className='h-fit w-full text-sm   md:text-base p-2 justify-center'>
                                             <a href="#" className="relative hover:font-extrabold items-center justify-center inline-block p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 rounded-lg shadow-2xl group">
                                                 <span className="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-red-500 rounded-full blur-md ease"></span>
